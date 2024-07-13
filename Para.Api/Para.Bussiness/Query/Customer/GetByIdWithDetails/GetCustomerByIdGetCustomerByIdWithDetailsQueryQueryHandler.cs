@@ -36,11 +36,11 @@ namespace Para.Bussiness.Query.Customer.GetById
                 };
             }
 
-            var customer = await unitOfWork.CustomerRepository
+            var customersWithDetails = await unitOfWork.CustomerRepository
                 .Include(c => c.CustomerAddresses, c => c.CustomerPhones)
                 .FirstOrDefaultAsync(c => c.Id == request.CustomerId);
 
-            if (customer == null)
+            if (customersWithDetails == null)
             {
                 return new ApiResponse<Para.Data.Domain.Customer>()
                 {
@@ -49,7 +49,7 @@ namespace Para.Bussiness.Query.Customer.GetById
                 };
             }
 
-            return new ApiResponse<Para.Data.Domain.Customer>(customer);
+            return new ApiResponse<Para.Data.Domain.Customer>(customersWithDetails);
         }
     }
 }
