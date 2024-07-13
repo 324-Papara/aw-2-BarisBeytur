@@ -25,6 +25,14 @@ namespace Para.Bussiness.Query.Customer.GetById
 
         public async Task<ApiResponse<CustomerResponse>> Handle(GetCustomerByIdQuery request, CancellationToken cancellationToken)
         {
+            if (request.CustomerId <= 0)
+            {
+                return new ApiResponse<CustomerResponse>()
+                {
+                    IsSuccess = false,
+                    Message = "Invalid Customer Id"
+                };
+            }
             var entity = await unitOfWork.CustomerRepository.GetById(request.CustomerId);
             var mapped = mapper.Map<CustomerResponse>(entity);
             return new ApiResponse<CustomerResponse>(mapped);
