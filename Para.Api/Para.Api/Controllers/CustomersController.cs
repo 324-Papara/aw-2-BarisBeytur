@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Para.Base.Response;
 using Para.Bussiness.Command.Customer.CreateCustomer;
+using Para.Bussiness.Command.Customer.DeleteCustomer;
 using Para.Bussiness.Command.Customer.UpdateCustomer;
 using Para.Bussiness.Cqrs;
 using Para.Schema;
