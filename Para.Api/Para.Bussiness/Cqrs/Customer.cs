@@ -4,7 +4,7 @@ using Para.Schema;
 
 namespace Para.Bussiness.Cqrs;
 
-public record CreateCustomerCommand(CustomerRequest Request) : IRequest<ApiResponse<CustomerResponse>>;
+//public record CreateCustomerCommand(CustomerRequest Request) : IRequest<ApiResponse<CustomerResponse>>;
 public record UpdateCustomerCommand(long CustomerId,CustomerRequest Request) : IRequest<ApiResponse>;
 public record DeleteCustomerCommand(long CustomerId) : IRequest<ApiResponse>;
 

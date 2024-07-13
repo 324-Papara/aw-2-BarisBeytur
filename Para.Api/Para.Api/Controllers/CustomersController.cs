@@ -1,7 +1,7 @@
-using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Para.Base.Response;
+using Para.Bussiness.Command.Customer;
 using Para.Bussiness.Cqrs;
 using Para.Schema;
 
@@ -38,8 +38,8 @@ namespace Para.Api.Controllers
         [HttpPost]
         public async Task<ApiResponse<CustomerResponse>> Post([FromBody] CustomerRequest value)
         {
-            var operation = new CreateCustomerCommand(value);
-            var result = await mediator.Send(operation);
+            CreateCustomerCommand command = new CreateCustomerCommand(value);
+            var result = await mediator.Send(command);
             return result;
         }
 
