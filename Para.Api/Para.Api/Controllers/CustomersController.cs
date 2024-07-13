@@ -7,6 +7,7 @@ using Para.Bussiness.Command.Customer.UpdateCustomer;
 using Para.Bussiness.Query.Customer.GetAll;
 using Para.Bussiness.Query.Customer.GetById;
 using Para.Bussiness.Query.Customer.GetByParameter;
+using Para.Data.Domain;
 using Para.Schema;
 using System.Formats.Asn1;
 
@@ -70,8 +71,17 @@ namespace Para.Api.Controllers
             var operation = new GetCustomerByParametersQuery(customerId, name, identityNumber);
             var result = await mediator.Send(operation);
             return result;
-        }   
+        }
 
+
+
+        [HttpGet("GetCustomerByIdWithDetails/{customerId}")]
+        public async Task<ApiResponse<Para.Data.Domain.Customer>> GetByIdWithDetails([FromRoute] long customerId)
+        {
+            var operation = new GetCustomerByIdWithDetailsQuery(customerId);
+            var result = await mediator.Send(operation);
+            return result;
+        }
 
     }
 }
