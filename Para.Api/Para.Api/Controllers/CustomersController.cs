@@ -6,7 +6,9 @@ using Para.Bussiness.Command.Customer.DeleteCustomer;
 using Para.Bussiness.Command.Customer.UpdateCustomer;
 using Para.Bussiness.Query.Customer.GetAll;
 using Para.Bussiness.Query.Customer.GetById;
+using Para.Bussiness.Query.Customer.GetByParameter;
 using Para.Schema;
+using System.Formats.Asn1;
 
 namespace Para.Api.Controllers
 {
@@ -61,5 +63,15 @@ namespace Para.Api.Controllers
             var result = await mediator.Send(operation);
             return result;
         }
+
+        [HttpGet("GetByQuery")]
+        public async Task<ApiResponse<List<CustomerResponse>>> Get([FromQuery] string? name, [FromQuery] string? identityNumber, [FromQuery] long? customerId)
+        {
+            var operation = new GetCustomerByParametersQuery(customerId, name, identityNumber);
+            var result = await mediator.Send(operation);
+            return result;
+        }   
+
+
     }
 }
