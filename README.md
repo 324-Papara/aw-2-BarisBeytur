@@ -4,7 +4,7 @@
 # Patika Papara 2. Hafta Ödevi
 
 
-#### Görev 1 - FluentValidation paketini implement ederek Modeller icin validasyon işlemlerini gerçekleştirmek
+# Görev 1 - FluentValidation paketini implement ederek Modeller icin validasyon işlemlerini gerçekleştirmek
 
 ![Screenshot 2024-07-13 224240](https://github.com/user-attachments/assets/fd145ab1-6968-42b9-b642-1414a054225c)
 ![Screenshot 2024-07-13 224340](https://github.com/user-attachments/assets/19f2b033-c0b9-4d1d-8a65-2f7d593d413a)
@@ -14,20 +14,20 @@
 
 
 
-#### Görev 2 - UnitOfWork ve GenericRepository kullanarak db context  üzerinde çalışacak Where ve Include işlemlerini yapabilecek methodlar hazırlamak
+# Görev 2 - UnitOfWork ve GenericRepository kullanarak db context  üzerinde çalışacak Where ve Include işlemlerini yapabilecek methodlar hazırlamak
 
-##### Include
+#### Include
 
 ![Screenshot 2024-07-13 223917](https://github.com/user-attachments/assets/56e798ef-e902-45a1-9ef8-8de308149b45)
 
-![image](https://github.com/user-attachments/assets/cac06474-4d93-4f5c-b2e2-5b1c9d5a6229)
+![image](https://github.com/user-attachments/assets/259f5ed8-dab6-4e3d-a223-1e603b00bc2c)
 
 
 
-##### Where
+#### Where
 
 ![Screenshot 2024-07-13 223951](https://github.com/user-attachments/assets/a5df0839-2085-49d4-b208-fd878d29c158)
 
-![image](https://github.com/user-attachments/assets/259f5ed8-dab6-4e3d-a223-1e603b00bc2c)
+![image](https://github.com/user-attachments/assets/4d11dfe0-5ec7-4f8f-a2a3-5944aff47a27)
 
 
