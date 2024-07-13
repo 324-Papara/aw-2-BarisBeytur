@@ -34,6 +34,14 @@ namespace Para.Bussiness.Query.Customer.GetById
                 };
             }
             var entity = await unitOfWork.CustomerRepository.GetById(request.CustomerId);
+            if (entity == null)
+            {
+                return new ApiResponse<CustomerResponse>()
+                {
+                    IsSuccess = false,
+                    Message = "Customer not found"
+                };
+            }
             var mapped = mapper.Map<CustomerResponse>(entity);
             return new ApiResponse<CustomerResponse>(mapped);
         }
