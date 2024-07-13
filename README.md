@@ -28,6 +28,6 @@
 
 ![Screenshot 2024-07-13 223951](https://github.com/user-attachments/assets/a5df0839-2085-49d4-b208-fd878d29c158)
 
-![image](https://github.com/user-attachments/assets/03af3e30-8bb7-489a-9714-139f0190a8fc)
+![image](https://github.com/user-attachments/assets/259f5ed8-dab6-4e3d-a223-1e603b00bc2c)
 
 
