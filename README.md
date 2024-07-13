@@ -7,10 +7,13 @@
 # Görev 1 - FluentValidation paketini implement ederek Modeller icin validasyon işlemlerini gerçekleştirmek
 
 ![Screenshot 2024-07-13 224240](https://github.com/user-attachments/assets/fd145ab1-6968-42b9-b642-1414a054225c)
+
 ![Screenshot 2024-07-13 224340](https://github.com/user-attachments/assets/19f2b033-c0b9-4d1d-8a65-2f7d593d413a)
 
 ![image](https://github.com/user-attachments/assets/7bdd5b7f-27bd-47af-8a2d-d8c843958344)
 
+
+------------
 
 
 
