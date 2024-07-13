@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using MediatR;
 using Para.Base.Response;
+using Para.Bussiness.Validation.Customer;
 using Para.Data.UnitOfWork;
 using Para.Schema;
 using System;
@@ -25,6 +27,9 @@ namespace Para.Bussiness.Command.Customer.UpdateCustomer
 
         public async Task<ApiResponse> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
+            CustomerRequestValidator validator = new CustomerRequestValidator();
+            await validator.ValidateAndThrowAsync(request.Request);
+
             var mapped = mapper.Map<CustomerRequest, Data.Domain.Customer>(request.Request);
             mapped.Id = request.CustomerId;
             mapped.InsertUser = "system";
