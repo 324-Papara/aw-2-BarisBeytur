@@ -6,7 +6,7 @@ using Microsoft.OpenApi.Models;
 using Para.Api.Middleware;
 using Para.Api.Service;
 using Para.Bussiness;
-using Para.Bussiness.Command.Customer;
+using Para.Bussiness.Command.Customer.CreateCustomer;
 using Para.Bussiness.Validation.Customer;
 using Para.Data.Context;
 using Para.Data.UnitOfWork;

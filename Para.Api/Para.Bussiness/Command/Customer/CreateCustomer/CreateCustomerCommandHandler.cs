@@ -6,7 +6,7 @@ using Para.Bussiness.Validation.Customer;
 using Para.Data.UnitOfWork;
 using Para.Schema;
 
-namespace Para.Bussiness.Command.Customer
+namespace Para.Bussiness.Command.Customer.CreateCustomer
 {
     public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, ApiResponse<CustomerResponse>>
     {
@@ -24,7 +24,7 @@ namespace Para.Bussiness.Command.Customer
             CustomerRequestValidator validator = new CustomerRequestValidator();
             await validator.ValidateAndThrowAsync(request.Request);
 
-            var mapped = mapper.Map<CustomerRequest, Para.Data.Domain.Customer>(request.Request);
+            var mapped = mapper.Map<CustomerRequest, Data.Domain.Customer>(request.Request);
             mapped.CustomerNumber = new Random().Next(1000000, 9999999);
             await unitOfWork.CustomerRepository.Insert(mapped);
             await unitOfWork.Complete();

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Para.Bussiness.Command.Customer
+namespace Para.Bussiness.Command.Customer.CreateCustomer
 {
     public class CreateCustomerCommand : IRequest<ApiResponse<CustomerResponse>>
     {

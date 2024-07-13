@@ -1,7 +1,8 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Para.Base.Response;
-using Para.Bussiness.Command.Customer;
+using Para.Bussiness.Command.Customer.CreateCustomer;
+using Para.Bussiness.Command.Customer.UpdateCustomer;
 using Para.Bussiness.Cqrs;
 using Para.Schema;
 
