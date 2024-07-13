@@ -4,7 +4,8 @@ using Para.Base.Response;
 using Para.Bussiness.Command.Customer.CreateCustomer;
 using Para.Bussiness.Command.Customer.DeleteCustomer;
 using Para.Bussiness.Command.Customer.UpdateCustomer;
-using Para.Bussiness.Cqrs;
+using Para.Bussiness.Query.Customer.GetAll;
+using Para.Bussiness.Query.Customer.GetById;
 using Para.Schema;
 
 namespace Para.Api.Controllers
